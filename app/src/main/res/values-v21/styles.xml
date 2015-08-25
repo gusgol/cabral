@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="android:ThemeOverlay.Material.Dark">
+        <item name="android:actionBarStyle">@style/Widget.Styled.ActionBar</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Widget.Styled.ActionBar" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>

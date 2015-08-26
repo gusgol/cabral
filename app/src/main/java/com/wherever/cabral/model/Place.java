@@ -1,5 +1,7 @@
 package com.wherever.cabral.model;
 
+import android.graphics.drawable.Drawable;
+
 import java.io.Serializable;
 
 /**
@@ -9,11 +11,21 @@ public class Place implements Serializable{
     private String mName;
     private String mType;
     private String mDistance;
+    private int mImage;
 
-    public Place(String name, String type, String distance) {
+    public Place(String name, String type, String distance, int image) {
         mName = name;
         mType = type;
         mDistance = distance;
+        mImage = image;
+    }
+
+    public int getImage() {
+        return mImage;
+    }
+
+    public void setImage(int image) {
+        mImage = image;
     }
 
     public String getName() {

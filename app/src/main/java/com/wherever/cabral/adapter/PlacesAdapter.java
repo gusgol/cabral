@@ -2,11 +2,13 @@ package com.wherever.cabral.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wherever.cabral.PlaceDetailActivity;
@@ -20,9 +22,11 @@ import java.util.ArrayList;
  */
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
 
+    private Context mContext;
     private ArrayList<Place> mList = new ArrayList<Place>();
 
-    public PlacesAdapter(ArrayList<Place> mList) {
+    public PlacesAdapter(Context context, ArrayList<Place> mList) {
+        mContext = context;
         this.mList = mList;
     }
 
@@ -41,6 +45,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
             holder.mName.setText(place.getName());
             holder.mType.setText(place.getType());
             holder.mDistance.setText(place.getDistance());
+            holder.mImage.setImageDrawable(ContextCompat.getDrawable(mContext, place.getImage()));
         }
     }
 
@@ -54,14 +59,17 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         public TextView mName;
         public TextView mType;
         public TextView mDistance;
+        public ImageView mImage;
         private Context mContext;
         public Place place;
+
 
         public ViewHolder(View view, Context context) {
             super(view);
             mName = (TextView) view.findViewById(R.id.name);
             mType = (TextView) view.findViewById(R.id.type);
             mDistance = (TextView) view.findViewById(R.id.distance);
+            mImage = (ImageView) view.findViewById(R.id.image);
             mContext = context;
             view.setOnClickListener(this);
         }

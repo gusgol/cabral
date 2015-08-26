@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.wherever.cabral.fragment.PlaceHistoryFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:paddingLeft="15dp"
+                android:text="Início"
+                android:textColor="#97979B"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Até a segunda administração de Saturnino de Souza e Oliveira, entre 1841 e 1842, Porto Alegre ainda não dispunha de um mercado central, sendo o comércio distribuído por vários pequenos estabelecimentos. Foi então constituída uma sociedade para a construção de um prédio adequado, localizado na antiga Praça do Paraíso, na área atualmente arborizada da Praça XV de Novembro. Este primeiro Mercado Público tinha uma planta quadrangular, em alvenaria de tijolos e com um portão de ferro, ficando pronto em 1844 e devendo concentrar todo o comércio de carne da cidade. Em 1845 foi contratado seu rebocamento externo e caiação."
+                android:textColor="#363636"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:paddingLeft="15dp"
+                android:text="Fundação"
+                android:textColor="#97979B"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Em 1871 o pátio interior foi calçado, e arborizado em 1873. Em 1886 foram instalados 24 chalés no lugar das árvores. Na administração de José Montaury foi elaborado um projeto de ampliação, construindo-se um segundo piso, para abrigar escritórios comerciais e industriais e repartições públicas. Em 1912, ainda em obras, irrompeu um grande incêndio que destruiu todos os chalés na área interna. O segundo pavimento ficou pronto em 1913, e novos chalés, agora de metal, bem como uma câmara frigorífica, foram entregues em 1915 pela empresa Bromberg e Cia."
+                android:textColor="#363636"
+                android:textSize="14sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_gravity="bottom"
+                android:background="#F6F6F6"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

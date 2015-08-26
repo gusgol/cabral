@@ -2,6 +2,7 @@ package com.wherever.cabral;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -15,7 +16,6 @@ import java.util.ArrayList;
 public class PlacesListActivity extends Activity {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private PlacesAdapter mPlacesAdapter;
 
@@ -30,15 +30,17 @@ public class PlacesListActivity extends Activity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new PlacesAdapter(getMockedPlaces());
-        mRecyclerView.setAdapter(mAdapter);
+        mPlacesAdapter = new PlacesAdapter(this, getMockedPlaces());
+        mRecyclerView.setAdapter(mPlacesAdapter);
     }
 
     private ArrayList<Place> getMockedPlaces() {
         ArrayList<Place> mList = new ArrayList<Place>();
-        mList.add(new Place("Mercado Público", "Lugar", "50m"));
-        mList.add(new Place("Rua da Praia", "Lugar", "150m"));
-        mList.add(new Place("Teatro São Pedro", "Lugar", "250m"));
+        mList.add(new Place("Mercado Público", "Lugar", "50 metros", R.drawable.praca));
+        mList.add(new Place("Rua da Praia", "Rua", "150 metros", R.drawable.rua_praia));
+        mList.add(new Place("Teatro São Pedro", "Lugar", "250 metros", R.drawable.teatro));
+        mList.add(new Place("Praça da Matriz", "Praça", "250 metros",R.drawable.praca));
+        mList.add(new Place("Parque da Redenção", "Parque", "650 metros", R.drawable.redencao));
         return mList;
 
     }
